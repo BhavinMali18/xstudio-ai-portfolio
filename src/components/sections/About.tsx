@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Lightbulb, Target, Rocket } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 const visionCards = [
   {
@@ -121,9 +122,7 @@ export const About = () => {
                   <div className="absolute inset-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl" />
                   {/* Center Logo */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-primary">
-                      <span className="text-primary-foreground font-bold text-4xl font-display">X</span>
-                    </div>
+                    <Logo size="lg" />
                   </div>
                   {/* Floating Nodes */}
                   {[0, 60, 120, 180, 240, 300].map((deg, i) => (

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#ai-focus", label: "AI Focus" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#process", label: "Process" },
+  { href: "#products", label: "Products" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#api", label: "Api for Developer" },
+  { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -30,20 +30,15 @@ export const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+          ? "glass-navbar"
           : "bg-transparent"
       }`}
     >
       <nav className="section-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">X</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">
-              Xstudio
-            </span>
+          <a href="#" className="flex items-center">
+            <Logo size="md" />
           </a>
 
           {/* Desktop Navigation */}
@@ -52,27 +47,33 @@ export const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="text-[#645876] hover:text-[#0F122E] transition-colors duration-200 text-sm font-medium"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="#login"
+              className="btn-login text-sm"
+            >
+              Log In
+            </a>
             <a
               href="#contact"
-              className="btn-hero-primary text-sm px-6 py-3"
+              className="btn-apply text-sm"
             >
-              Get Started
+              Apply Now
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-[#0F122E]"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -86,7 +87,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            className="md:hidden glass-navbar border-b border-border/20"
           >
             <div className="section-container py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -94,18 +95,27 @@ export const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-lg font-medium py-2"
+                  className="text-[#645876] hover:text-[#0F122E] transition-colors duration-200 text-lg font-medium py-2"
                 >
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="btn-hero-primary text-center mt-4"
-              >
-                Get Started
-              </a>
+              <div className="flex flex-col gap-3 mt-4">
+                <a
+                  href="#login"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="btn-login text-center"
+                >
+                  Log In
+                </a>
+                <a
+                  href="#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="btn-apply text-center"
+                >
+                  Apply Now
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

@@ -157,67 +157,74 @@ export const AIFocus = () => {
           >
             <div className="glass-card p-8 md:p-12">
               {/* Animated Flow Diagram */}
-              <div className="relative aspect-square max-w-sm mx-auto">
-                {/* Center Hub */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-primary z-10">
-                  <Brain className="w-10 h-10 text-primary-foreground" />
-                </div>
+              <div className="bg-white p-6">
+      <div className="grid grid-cols-6 gap-4 max-w-6xl mx-auto">
 
-                {/* Orbiting Elements */}
-                {[
-                  { icon: "📊", label: "Data", angle: 0 },
-                  { icon: "🎯", label: "Strategy", angle: 72 },
-                  { icon: "✨", label: "Content", angle: 144 },
-                  { icon: "🚀", label: "Launch", angle: 216 },
-                  { icon: "📈", label: "Growth", angle: 288 },
-                ].map((item, i) => (
-                  <motion.div
-                    key={item.label}
-                    animate={{ 
-                      rotate: [0, 360],
-                    }}
-                    transition={{ 
-                      duration: 30, 
-                      repeat: Infinity, 
-                      ease: "linear",
-                    }}
-                    style={{ 
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transformOrigin: '0 0',
-                    }}
-                    className="w-0 h-0"
-                  >
-                    <div 
-                      className="absolute glass-card px-4 py-3 flex items-center gap-2 whitespace-nowrap"
-                      style={{
-                        transform: `rotate(${item.angle}deg) translateX(120px) rotate(-${item.angle}deg)`,
-                      }}
-                    >
-                      <span className="text-lg">{item.icon}</span>
-                      <span className="text-sm font-medium">{item.label}</span>
-                    </div>
-                  </motion.div>
-                ))}
+        {/* Card 1 */}
+        <div className="col-span-2 row-span-2 rounded-xl overflow-hidden border">
+          <img
+            src="/work done/containerimages/68c02cee29753a0bfbf97a228ad7d78f.jpg"
+            alt="AI Focus Image 1"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-                {/* Connection Lines */}
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200">
-                  <motion.circle
-                    cx="100"
-                    cy="100"
-                    r="60"
-                    fill="none"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="1"
-                    strokeDasharray="4 4"
-                    initial={{ rotate: 0 }}
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    style={{ transformOrigin: 'center' }}
-                  />
-                </svg>
-              </div>
+        {/* Card 2 */}
+        <div className="col-span-2 rounded-xl border flex items-center justify-center h-40 overflow-hidden">
+          <img
+            src="/work done/containerimages/d878253a9d6220709e3e3c94d7ddd059.jpg"
+            alt="AI Focus Image 2"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 3 */}
+        <div className="col-span-2 row-span-2 rounded-xl overflow-hidden border">
+          <img
+            src="/work done/containerimages/2b4a5591a44fe5d813e56eedd8221c7c.jpg"
+            alt="AI Focus Image 3"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 4 */}
+        <div className="col-span-2 rounded-xl overflow-hidden border h-40">
+          <img
+            src="/work done/containerimages/dd9091c1864046466bdfa763bc0885df.jpg"
+            alt="AI Focus Image 4"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 5 */}
+        <div className="col-span-2 rounded-xl overflow-hidden border h-40">
+          <img
+            src="/work done/containerimages/742caca642cfd1821ba43736567ce75b.jpg"
+            alt="AI Focus Image 5"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 6 */}
+        <div className="col-span-4 rounded-xl border h-56 flex items-center justify-center overflow-hidden">
+          <img
+            src="/work done/containerimages/image1.png"
+            alt="AI Focus Image 6"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 7 */}
+        <div className="col-span-4 rounded-xl overflow-hidden border h-56">
+          <img
+            src="/work done/containerimages/f04199ab3ee3ac404b2114e4203b02d3.png"
+            alt="AI Focus Image 7"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+      </div>
+    </div>
             </div>
           </motion.div>
         </div>

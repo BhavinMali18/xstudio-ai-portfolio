@@ -3,26 +3,29 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { AIFocus } from "@/components/sections/AIFocus";
+import { VideoCarousel } from "@/components/sections/VideoCarousel";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Process } from "@/components/sections/Process";
-import { Testimonials } from "@/components/sections/Testimonials";
+import { TeamPerspectives } from "@/components/sections/TeamPerspectives";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-[#E3E7ED] text-[#0F122E] overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
         <About />
         <Services />
         <AIFocus />
+        <VideoCarousel />
         <Portfolio />
         <WhyChooseUs />
         <Process />
-        <Testimonials />
+        <TeamPerspectives />
         <Contact />
       </main>
       <Footer />
