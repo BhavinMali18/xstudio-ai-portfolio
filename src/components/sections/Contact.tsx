@@ -60,7 +60,7 @@ export const Contact = () => {
     const message = `Hello! I'm ${formData.name}${formData.company ? ` from ${formData.company}` : ''}.\n\n${formData.message}${servicesText}`;
     
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/917043633667?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/916351951585?text=${encodedMessage}`;
     
     window.open(whatsappUrl, "_blank");
     
@@ -126,7 +126,7 @@ export const Contact = () => {
                 </a>
 
                 <a 
-                  href="tel:+917043633667" 
+                  href="tel:+916351951585" 
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-[#6B50A2]/5 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#6B50A2]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -134,7 +134,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-[#645876]">Call Us</div>
-                    <div className="font-medium text-[#0F122E] group-hover:text-[#6B50A2] transition-colors">+91 7043633667</div>
+                    <div className="font-medium text-[#0F122E] group-hover:text-[#6B50A2] transition-colors">+91 6351951585</div>
                   </div>
                 </a>
 

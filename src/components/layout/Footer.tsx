@@ -122,11 +122,11 @@ export const Footer = () => {
                 <span className="text-sm">office@xstudio.blog</span>
               </a>
               <a
-                href="tel:+917043633667"
+                href="tel:+916351951585"
                 className="flex items-center gap-3 px-6 py-3 bg-[#6B50A2]/10 hover:bg-[#6B50A2]/20 border border-[#6B50A2]/30 rounded-xl transition-all group text-white"
               >
                 <Phone className="w-5 h-5 text-[#6B50A2] group-hover:scale-110 transition-transform" />
-                <span className="text-sm">+91 7043633667</span>
+                <span className="text-sm">+91 6351951585</span>
               </a>
             </div>
           </div>
