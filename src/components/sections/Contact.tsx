@@ -138,6 +138,19 @@ export const Contact = () => {
                   </div>
                 </a>
 
+                <a 
+                  href="tel:+917043633667" 
+                  className="flex items-center gap-4 p-4 rounded-xl hover:bg-[#6B50A2]/5 transition-colors group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#6B50A2]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Phone className="w-5 h-5 text-[#6B50A2]" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-[#645876]">Call Us</div>
+                    <div className="font-medium text-[#0F122E] group-hover:text-[#6B50A2] transition-colors">+91 7043633667</div>
+                  </div>
+                </a>
+
                 <div className="flex items-center gap-4 p-4 rounded-xl">
                   <div className="w-12 h-12 rounded-xl bg-[#6B50A2]/10 flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-[#6B50A2]" />
