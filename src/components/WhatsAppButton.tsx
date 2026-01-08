@@ -29,11 +29,11 @@ export const WhatsAppButton = ({
       {/* Chat Bubble */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.8 }}
-            className="fixed bottom-24 right-6 z-50 w-80 max-w-[calc(100vw-3rem)]"
+            className="fixed bottom-24 right-28 z-40 w-80 max-w-[calc(100vw-3rem)]"
           >
             <div className="glass-card p-6 shadow-2xl">
               {/* Header */}
@@ -82,7 +82,7 @@ export const WhatsAppButton = ({
       {/* Floating Button */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        className="fixed bottom-6 right-28 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open WhatsApp chat"

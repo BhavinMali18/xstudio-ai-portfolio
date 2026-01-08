@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
         phoneNumber="916351951585" 
         defaultMessage="Hello! I'm interested in your services. Can you help me?"
       />
+      <ChatWidget />
     </TooltipProvider>
   </QueryClientProvider>
 );
