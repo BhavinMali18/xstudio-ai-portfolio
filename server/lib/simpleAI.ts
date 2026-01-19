@@ -42,7 +42,7 @@ Would you like to provide these details so I can generate a quote summary for yo
 
 📧 **Email:** office@xstudio.blog
 📱 **Phone/WhatsApp:** 
-   - +91 6351951585 (Primary)
+   - +91 9998739029 (Primary)
    - +91 7043633667
 📍 **Location:** Bangalore, India (Remote)
 
@@ -64,7 +64,7 @@ We usually respond within 2 hours! Would you like me to help you get started wit
    - Scaled MRR from $10K to $100K
    - Full-funnel SEO and content marketing solution
 
-For the complete portfolio deck with detailed case studies, please contact us at office@xstudio.blog or +91 6351951585.`;
+For the complete portfolio deck with detailed case studies, please contact us at office@xstudio.blog or +91 9998739029.`;
   }
 
   // About Xstudio

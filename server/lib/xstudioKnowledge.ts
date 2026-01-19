@@ -96,7 +96,7 @@ TEAM
 
 CONTACT INFORMATION
 Email: office@xstudio.blog
-Phone/WhatsApp: +91 6351951585 (Primary), +91 7043633667
+Phone/WhatsApp: +91 9998739029 (Primary), +91 7043633667
 Location: Bangalore, India (Remote)
 Response Time: Usually responds within 2 hours
 

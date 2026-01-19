@@ -110,7 +110,7 @@ Then: `ollama pull llama3.2`
 
 When lead capture completes, generates a WhatsApp link:
 ```
-https://wa.me/916351951585?text=[encoded message]
+https://wa.me/919998739029?text=[encoded message]
 ```
 
 Message includes:

@@ -52,18 +52,18 @@ export const Contact = () => {
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const servicesText = formData.selectedServices.length > 0
       ? `\n\nServices I'm interested in:\n${formData.selectedServices.map((s, i) => `${i + 1}. ${s}`).join('\n')}`
       : '';
-    
+
     const message = `Hello! I'm ${formData.name}${formData.company ? ` from ${formData.company}` : ''}.\n\n${formData.message}${servicesText}`;
-    
+
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/916351951585?text=${encodedMessage}`;
-    
+    const whatsappUrl = `https://wa.me/919998739029?text=${encodedMessage}`;
+
     window.open(whatsappUrl, "_blank");
-    
+
     // Reset form
     setFormData({ name: "", company: "", message: "", selectedServices: [] });
   };
@@ -89,7 +89,7 @@ export const Contact = () => {
             <span className="text-[#6B50A2]">with Us</span>
           </h2>
           <p className="section-subtitle mx-auto text-[#645876]">
-            Ready to transform your business? Get a free consultation and discover 
+            Ready to transform your business? Get a free consultation and discover
             how our AI-powered solutions can accelerate your growth.
           </p>
         </motion.div>
@@ -106,14 +106,14 @@ export const Contact = () => {
                 Start the Conversation
               </h3>
               <p className="text-[#645876] mb-8">
-                Whether you have a project in mind or just want to explore possibilities, 
+                Whether you have a project in mind or just want to explore possibilities,
                 we're here to help. Reach out and let's discuss how we can work together.
               </p>
 
               {/* Contact Methods */}
               <div className="space-y-6">
-                <a 
-                  href="mailto:office@xstudio.blog" 
+                <a
+                  href="mailto:office@xstudio.blog"
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-[#6B50A2]/5 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#6B50A2]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -125,8 +125,8 @@ export const Contact = () => {
                   </div>
                 </a>
 
-                <a 
-                  href="tel:+916351951585" 
+                <a
+                  href="tel:+919998739029"
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-[#6B50A2]/5 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#6B50A2]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -134,12 +134,12 @@ export const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-[#645876]">Call Us</div>
-                    <div className="font-medium text-[#0F122E] group-hover:text-[#6B50A2] transition-colors">+91 6351951585</div>
+                    <div className="font-medium text-[#0F122E] group-hover:text-[#6B50A2] transition-colors">+91 9998739029</div>
                   </div>
                 </a>
 
-                <a 
-                  href="tel:+917043633667" 
+                <a
+                  href="tel:+917043633667"
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-[#6B50A2]/5 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#6B50A2]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -240,11 +240,10 @@ export const Contact = () => {
                             key={service}
                             type="button"
                             onClick={() => toggleService(service)}
-                            className={`w-full text-left px-4 py-2 rounded-lg hover:bg-[#6B50A2]/5 transition-colors flex items-center justify-between ${
-                              formData.selectedServices.includes(service)
+                            className={`w-full text-left px-4 py-2 rounded-lg hover:bg-[#6B50A2]/5 transition-colors flex items-center justify-between ${formData.selectedServices.includes(service)
                                 ? "bg-[#6B50A2]/10 text-[#6B50A2]"
                                 : "text-[#0F122E]"
-                            }`}
+                              }`}
                           >
                             <span>{service}</span>
                             {formData.selectedServices.includes(service) && (

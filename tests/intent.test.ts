@@ -106,8 +106,8 @@ describe('Intent Detection', () => {
         contactMethod: 'whatsapp',
       };
 
-      const url = buildWhatsAppUrl(leadData, '916351951585');
-      expect(url).toContain('wa.me/916351951585');
+      const url = buildWhatsAppUrl(leadData, '919998739029');
+      expect(url).toContain('wa.me/919998739029');
       expect(url).toContain('text=');
     });
   });

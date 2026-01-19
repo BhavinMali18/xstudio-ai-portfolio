@@ -71,11 +71,11 @@ app.post('/api/chat', async (req, res) => {
     if (USE_FREE_API) {
       try {
         const responseText = generateSimpleResponse(message, conversationHistory);
-        
+
         // Stream the response in chunks (words) for better reliability
         const words = responseText.split(/(\s+)/);
         let accumulatedText = '';
-        
+
         for (const word of words) {
           accumulatedText += word;
           res.write(`data: ${JSON.stringify({ content: accumulatedText })}\n\n`);
@@ -90,7 +90,7 @@ app.post('/api/chat', async (req, res) => {
       } catch (error: any) {
         console.error('Simple AI error:', error);
         // Fallback to helpful message
-        const fallbackResponse = "I'm here to help with Xstudio services! However, I'm experiencing some technical difficulties. Please contact us directly at office@xstudio.blog or +91 6351951585 for immediate assistance.";
+        const fallbackResponse = "I'm here to help with Xstudio services! However, I'm experiencing some technical difficulties. Please contact us directly at office@xstudio.blog or +91 9998739029 for immediate assistance.";
         res.write(`data: ${JSON.stringify({ content: fallbackResponse })}\n\n`);
         res.write('data: [DONE]\n\n');
         res.end();
@@ -132,7 +132,7 @@ app.post('/api/chat', async (req, res) => {
     try {
       while (true) {
         const { done, value } = await reader.read();
-        
+
         if (done) {
           res.write('data: [DONE]\n\n');
           res.end();
@@ -144,7 +144,7 @@ app.post('/api/chat', async (req, res) => {
 
         for (const line of lines) {
           if (line.trim() === '') continue;
-          
+
           try {
             const json = JSON.parse(line);
             if (json.message?.content) {

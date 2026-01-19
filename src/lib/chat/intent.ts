@@ -48,7 +48,7 @@ export function detectBuyingIntent(message: string): boolean {
 export function detectServices(message: string): string[] {
   const lowerMessage = message.toLowerCase();
   const detected: string[] = [];
-  
+
   const serviceMap: Record<string, string> = {
     'ai marketing': 'AI Marketing & Automation',
     'automation': 'AI Marketing & Automation',
@@ -87,7 +87,7 @@ export function getIntentStep(
   currentLeadData?: Partial<LeadData>
 ): IntentResult {
   const hasIntent = detectBuyingIntent(message);
-  
+
   if (!hasIntent) {
     return { hasBuyingIntent: false, needsLeadCapture: false };
   }
@@ -131,44 +131,44 @@ export function getIntentStep(
  */
 export function buildWhatsAppMessage(leadData: LeadData): string {
   const parts: string[] = [];
-  
+
   parts.push(`Hi! I'm ${leadData.name}${leadData.company ? ` from ${leadData.company}` : ''}.`);
   parts.push('');
   parts.push("I'm interested in getting a quote for:");
   parts.push('');
-  
+
   if (leadData.services.length > 0) {
     parts.push('Services Needed:');
     leadData.services.forEach(service => parts.push(`• ${service}`));
     parts.push('');
   }
-  
+
   if (leadData.timeline) {
     parts.push(`Timeline: ${leadData.timeline}`);
   }
-  
+
   if (leadData.budget) {
     parts.push(`Budget Range: ${leadData.budget}`);
   }
-  
+
   if (leadData.projectDescription) {
     parts.push('');
     parts.push('Project Brief:');
     parts.push(leadData.projectDescription);
   }
-  
+
   parts.push('');
   parts.push(`Preferred Contact: ${leadData.contactMethod === 'whatsapp' ? 'WhatsApp' : 'Email'}`);
   parts.push('');
   parts.push('Looking forward to discussing this project!');
-  
+
   return parts.join('\n');
 }
 
 /**
  * Builds WhatsApp URL
  */
-export function buildWhatsAppUrl(leadData: LeadData, phoneNumber: string = '916351951585'): string {
+export function buildWhatsAppUrl(leadData: LeadData, phoneNumber: string = '919998739029'): string {
   const message = buildWhatsAppMessage(leadData);
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -181,11 +181,11 @@ export function validateInput(message: string): { valid: boolean; error?: string
   if (!message || message.trim().length === 0) {
     return { valid: false, error: 'Message cannot be empty' };
   }
-  
+
   if (message.length > 2000) {
     return { valid: false, error: 'Message is too long (max 2000 characters)' };
   }
-  
+
   return { valid: true };
 }
 
@@ -208,7 +208,7 @@ export function detectPromptInjection(message: string): boolean {
     'your new role',
     'your new identity'
   ];
-  
+
   return injectionPatterns.some(pattern => lowerMessage.includes(pattern));
 }
 

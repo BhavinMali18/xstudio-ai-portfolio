@@ -54,9 +54,8 @@ const FooterColumn = ({ title, items, hasDropdown = false, className = "" }: Foo
           {title}
         </span>
         <ChevronDown
-          className={`w-4 h-4 ml-2 transition-transform md:hidden ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`w-4 h-4 ml-2 transition-transform md:hidden ${isOpen ? "rotate-180" : ""
+            }`}
         />
       </button>
       <ul className={`space-y-2 ${isOpen ? "block" : "hidden md:block"}`}>
@@ -122,11 +121,11 @@ export const Footer = () => {
                 <span className="text-sm">office@xstudio.blog</span>
               </a>
               <a
-                href="tel:+916351951585"
+                href="tel:+919998739029"
                 className="flex items-center gap-3 px-6 py-3 bg-[#6B50A2]/10 hover:bg-[#6B50A2]/20 border border-[#6B50A2]/30 rounded-xl transition-all group text-white"
               >
                 <Phone className="w-5 h-5 text-[#6B50A2] group-hover:scale-110 transition-transform" />
-                <span className="text-sm">+91 6351951585</span>
+                <span className="text-sm">+91 9998739029</span>
               </a>
               <a
                 href="tel:+917043633667"
